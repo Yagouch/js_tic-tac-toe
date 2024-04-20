@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic Tac Toe Game</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Tic Tac Toe</h1>
+    </header>
+    <div class="container">
+
+        <div class="game">
+            <table>
+                <tr>
+                    <td><input type="button" id="btn00" onclick="draw('btn00')"></td>
+                    <td><input type="button" id="btn01" onclick="draw('btn01')"></td>
+                    <td><input type="button" id="btn02" onclick="draw('btn02')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btn10" onclick="draw('btn10')"></td>
+                    <td><input type="button" id="btn11" onclick="draw('btn11')"></td>
+                    <td><input type="button" id="btn12" onclick="draw('btn12')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" id="btn20" onclick="draw('btn20')"></td>
+                    <td><input type="button" id="btn21" onclick="draw('btn21')"></td>
+                    <td><input type="button" id="btn22" onclick="draw('btn22')"></td>
+                </tr>
+            </table>
+            <input type="button" id="reset" value="reset" onclick="reset()">
+            <h2 class="score" id="score"></h2>
+            <!-- <div>
+                <p>Victories from X: </p>
+                <p>Victories from O:</p>
+            </div> -->
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
