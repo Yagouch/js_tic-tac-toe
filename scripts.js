@@ -1,18 +1,29 @@
 
 let cont_players = 0
 let isWin = false
+let winsX = 0
+let winsO = 0
 
 function draw(position) {
     if (document.getElementById(position).value == '' && !isWin){
         if (cont_players % 2 == 0) {
             document.getElementById(position).value = 'x';
+            document.getElementById("score").textContent = 'O move'
             cont_players++;
         } else {
             document.getElementById(position).value = 'o';
+            document.getElementById("score").textContent = 'X move'
             cont_players++;
         }
         if (checkWin(position)) {
             isWin = true
+            if (document.getElementById(position).value == 'x'){
+                winsX++;
+                document.getElementById("recordX").textContent = `Victories from X: ${winsX}`;
+            } else {
+                winsO++;
+                document.getElementById("recordO").textContent = `Victories from O: ${winsO}`;
+            }
             document.getElementById("score").textContent = `Win from ${document.getElementById(position).value}!`
         }
     }
@@ -66,5 +77,9 @@ function reset() {
         }
     }
     isWin = false
-    document.getElementById("score").textContent = ''
+    if (cont_players % 2 == 0) {
+        document.getElementById("score").textContent = 'X move'
+    } else {
+        document.getElementById("score").textContent = 'O move'
+    }
 }

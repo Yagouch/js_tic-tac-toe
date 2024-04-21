@@ -32,9 +32,9 @@ h1 {
 }
 
 .game {
-    background-color: gray;
+    background-color: #aaa;
     width: min(320px, 80%);
-    height: min(420px, 80%);
+    height: 600px;
     margin: 0 auto;
     padding: 30px;
     border-radius: 5px;
